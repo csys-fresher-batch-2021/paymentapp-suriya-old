@@ -1,13 +1,13 @@
 package in.suriya.service;
 
 import java.util.ArrayList;
-
+import java.util.List;
 
 import in.suriya.model.Staff;
 import in.suriya.validater.Validation;
 
 public class StaffService {
-	public static ArrayList<Staff> staffList = new ArrayList<Staff>(); // to store staff data in
+	private  static final List<Staff> staffList = new ArrayList<>(); // to store staff data in
 	// staffDetail class
 
 // Default staff Details
@@ -24,7 +24,7 @@ public class StaffService {
 		staffList.add(st2);
 	}
 
-	public static boolean validate(String mobNo, String password) {
+	public static boolean validater(String mobNo, String password) {
 		boolean mobNoValid = Validation.mobNoValidater(mobNo);
 		boolean passwordValid = Validation.passwordValidater(password);
 		boolean exist = false;
@@ -52,5 +52,24 @@ public class StaffService {
 		}
 		return exist;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }
