@@ -10,10 +10,10 @@ import javax.servlet.http.HttpServletResponse;
 import in.suriya.service.StaffService;
 
 /**
- * Servlet implementation class UserServlet
+ * Servlet implementation class StaffServlet
  */
-@WebServlet("/UserServlet")
-public class UserServlet extends HttpServlet {
+@WebServlet("/StaffServlet")
+public class StaffServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
    
 
@@ -21,17 +21,23 @@ public class UserServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String mobilenumber = request.getParameter("mobilenumber");
-		String password = request.getParameter("password");
-		boolean valid = StaffService.validater(mobilenumber, password);
+		
+		try{
+		  String mobileNo =request.getParameter("mobilenumber");
+		  String password = request.getParameter("password");
+		  boolean valid = StaffService.validater(mobileNo,password);
 
-		if (valid) {
-			String message = "Successfully logged in";
-			response.sendRedirect("login.jsp?infoMessage=" + message);
-		} else {
-			String message = "Invalid Login Credentials";
+		  if (valid) {
+			 String message = "Successfully logged in";
+			 response.sendRedirect("login.jsp?infoMessage=" + message);
+		  }
+		}catch(Exception e) {
+			
+			String message = "Invalid mobile Number";
 			response.sendRedirect("login.jsp?errorMessage=" + message);
+			
 		}
+		
 		
 	}
 

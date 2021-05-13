@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
@@ -10,7 +10,7 @@
 <jsp:include page="header.jsp"></jsp:include>
 	<main class="container-fluid">
 		<h3>Login</h3>
-<form action="UserServlet" method="get">
+<form action="StaffServlet" method="get">
 <label for="mobilenumber">mobile number</label>
 <input type="number" name="mobilenumber" pattern="[6-9][0-9]{9}" placeholder="Enter mobile number" required autofocus/>
 <br/>
