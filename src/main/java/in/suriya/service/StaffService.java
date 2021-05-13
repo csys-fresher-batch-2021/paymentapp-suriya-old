@@ -4,15 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 import in.suriya.model.Staff;
-import in.suriya.Util.Validation;
+import in.suriya.util.Validation;
 
 public class StaffService {
+	    private StaffService() {
+	    	//Default constructor
+	    }
+	
 	    private  static final List<Staff> staffList = new ArrayList<>();
-	   static {
-        Staff st1=new Staff(9500500452L,"Suriya1@");
-		Staff st2 = new Staff(9003750359L,"Harish1#");
-		staffList.add(st1);
-		staffList.add(st2);
+	    static {
+         Staff st1=new Staff(9500500452L,"Suriya1@");
+		 Staff st2 = new Staff(9003750359L,"Harish1#");
+		 staffList.add(st1);
+		 staffList.add(st2);
 		}
 	   
 	   

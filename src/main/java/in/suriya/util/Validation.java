@@ -1,9 +1,12 @@
-package in.suriya.Util;
+package in.suriya.util;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Validation {
+	private Validation() {
+		//default constructor
+	}
 
 	
 	/**
