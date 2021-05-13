@@ -10,7 +10,7 @@ public class TestStaffService {
 
 	 @Test
      public void testStudentValidate() {
-       boolean isvalid=StaffService.validater("9003750359","Harish1#");
+       boolean isvalid=StaffService.staffValidater("9003750359","Harish1#");
        assertEquals(true,isvalid);
 	 }
 }

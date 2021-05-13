@@ -26,11 +26,15 @@ public class StaffServlet extends HttpServlet {
 		try{
 		  String mobileNo =request.getParameter("mobilenumber");
 		  String password = request.getParameter("password");
-		  boolean valid = StaffService.validater(mobileNo,password);
+		  boolean valid = StaffService.staffValidater(mobileNo,password);
 
 		  if (valid) {
 			 String message = "Successfully logged in";
 			 response.sendRedirect("login.jsp?infoMessage=" + message);
+		  }else {
+			  String message = "invalid Login Credentials";
+			  response.sendRedirect("login.jsp?infoMessage=" + message);
+			  
 		  }
 		}catch(Exception e) {
 			

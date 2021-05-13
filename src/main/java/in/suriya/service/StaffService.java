@@ -28,7 +28,7 @@ public class StaffService {
 	    * @return
 	    */
 	    
-		public static boolean validater(String mobNo, String password) {
+		public static boolean staffValidater(String mobNo, String password) {
 		boolean exist=false;
 		boolean mobNoValid = Validation.mobNoValidater(mobNo);
 		boolean passwordValid = Validation.passwordValidater(password);

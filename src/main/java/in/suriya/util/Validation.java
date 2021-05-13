@@ -18,13 +18,15 @@ public class Validation {
 	
 	public static boolean mobNoValidater(String mobNo) {
 		boolean isMobNoValid=false;
-	    String check = "^([9][1])?[6-9]\\d{9}$";
+		long mobNumber = Long.parseLong(mobNo);
+		String check = "^([9][1])?[6-9]\\d{9}$";
 		Pattern p = Pattern.compile(check);
-		Matcher m = p.matcher(mobNo);
-	    isMobNoValid = m.matches();
-	
+		Matcher m = p.matcher(String.valueOf(mobNumber));
+		isMobNoValid = true;
+			
 		return isMobNoValid;
 	}
+	
 	
 	
 
