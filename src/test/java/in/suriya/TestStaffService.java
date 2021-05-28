@@ -26,7 +26,7 @@ public class TestStaffService {
 	
 	 
 	 
-	@Test
+	/*@Test
      public void testRegisterStaff() throws Exception {
        boolean register=StaffLoginAndRegisterService.registerStaff("vijay",9345535935L,"Vijay3#sd");
        assertTrue(register);
@@ -36,6 +36,6 @@ public class TestStaffService {
     public void testRegisterStaff1() throws Exception {
       boolean register=StaffLoginAndRegisterService.registerStaff("suriya",9500500452L,"Suriya1@");
       assertFalse(register);
-      }
+      }*/
 }
 
