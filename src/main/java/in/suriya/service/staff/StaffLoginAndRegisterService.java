@@ -22,14 +22,13 @@ public class StaffLoginAndRegisterService {
 	    */
 	    
 		public static String staffValidater(long mobNo, String password) throws Exception {
-		String name=null;
+		String staffName=null;
 		Validation.mobNoValidater(mobNo);
 		Validation.passwordValidater(password);
 		
-
-		name=StaffDAO.findStaff(mobNo,password);
+		staffName=StaffDAO.findStaff(mobNo,password);
 		
-		return name;
+		return staffName;
 	}
 		
 	

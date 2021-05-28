@@ -285,7 +285,7 @@ public class StudentDAO {
 	                int fee=rs.getInt("fee");
 	                String paymentStatus=rs.getString("payment_status");
 	          
-	    			Student stud=new Student(rollNo,mobNo,fee,paymentStatus);
+	    			Student stud=new Student(rollNum,mobNo,fee,paymentStatus);
 	    			studentList.add(stud);
 	            	 
 	            }

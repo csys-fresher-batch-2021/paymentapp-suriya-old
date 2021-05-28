@@ -25,7 +25,6 @@ public class StaffLoginServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		try{
-			System.out.println("hai");
 		  Long mobileNo =Long.parseLong(request.getParameter("mobileNo"));
 		  String password = request.getParameter("password");
 		  String staffName = StaffLoginAndRegisterService.staffValidater(mobileNo,password);

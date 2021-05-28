@@ -26,7 +26,7 @@ public class StaffDAO {
 	 */
 	
 	public static String findStaff(long mobNo,String password) throws ClassNotFoundException, SQLException {
-		String name=null;
+		String staffName=null;
 		Connection connection=null;
 		PreparedStatement pst=null;
 		ResultSet rs=null;
@@ -40,7 +40,7 @@ public class StaffDAO {
         
            rs =pst.executeQuery();
            while(rs.next()) {
-               name=rs.getString("name");
+               staffName=rs.getString("name");
              }
 		}catch(ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
@@ -48,7 +48,7 @@ public class StaffDAO {
 		        ConnectionUtil.close(connection,pst,rs);
 			}
         
-		return name;
+		return staffName;
 	}
 	
 	

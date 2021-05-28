@@ -1,6 +1,5 @@
 package in.suriya;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
@@ -23,12 +22,7 @@ public class TestStaffService {
        String name=StaffLoginAndRegisterService.staffValidater(9003750349L,"Harish1#");
        assertNull(name);
        }
-	 
-/*	 @Test
-     public void testStudentValidate2() throws Exception {
-       String name=StaffLoginAndRegisterService.staffValidater(7003750359L,"Harish1#");
-       assertEquals("Invalid MobileNo Format",getMessage());
-       }*/
+	
 	
 	 
 	 
